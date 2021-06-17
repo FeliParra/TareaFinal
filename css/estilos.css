@@ -1,0 +1,268 @@
+/*      GENERAL     */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Georgia, Times, serif;
+}
+
+p {
+  font-size: 14px;
+  text-align: justify;
+}
+
+p em {
+  font-style: italic;
+}
+
+a {
+  color: #ff3a20;
+}
+
+h1,
+h2 {
+  font-family: Helvetica, Arial, sans-serif;
+}
+/*      HEADER      */
+header h1 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+header img {
+  display: block;
+  margin: 1em auto 0 auto;
+}
+
+/*      NAV-BAR     */
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1em;
+  margin-top: 2em;
+  list-style: none;
+}
+
+nav ul li a {
+  padding: 0 2em;
+  color: #000000;
+  font-size: 1em;
+  font-weight: 600;
+  transition: 0.5s background-color, 0.5s color;
+  text-decoration: none;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+nav ul li a:hover {
+  color: #ff3a20;
+}
+
+.active {
+  color: #ff3a20;
+}
+
+/*      MAIN        */
+.article {
+  margin: 4em auto;
+  width: 80%;
+}
+
+.article h1 {
+  margin: 0 0 1em;
+  font-weight: bold;
+}
+
+
+.article ol li{
+  font-size: 1.4em;
+  margin: 1em 0;
+}
+.article ol li ul li{
+  font-size: 0.8em;
+}
+.article ol li ul{
+  list-style: square;
+  padding-left: 2em;
+}
+.article ol li ul li ul{
+  padding-left: 4em;
+  list-style: circle;
+  /* list-style-image: url("img/list-icon.png"); No venía con los archivos que nos enviaste dicho png*/
+}
+
+.titulosG{
+  font-family: Georgia, Times, serif;
+  font-weight: 100;
+}
+
+.nombreFecha {
+  font-size: 16px;
+}
+/* Autora */
+.author {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: center;
+  margin: 1em 0 2em 0;
+  background-color: #f7f2f3;
+  padding: 1em 0;
+}
+
+.author img {
+  display: block;
+  margin: 0 0.5em;
+  width: 7em;
+  height: 7em;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author p {
+  text-align: justify;
+  width: 85%;
+}
+/* Texto grande */
+.infoG p {
+  font-size: 1.5em;
+  margin: 0 0 1em;
+}
+
+/* Video Youtube */
+.video {
+  width: 80%;
+  height: 34em;
+  margin: 2em auto 0 auto;
+  padding: auto;
+  display: block;
+}
+
+.videoDesc {
+  font-size: 10px;
+  margin: 0.5em 0 2em 12em;
+}
+
+/* Texto con fondo gris */
+
+.fondoGris {
+  background-color: #f7f2f3;
+  border-right: 0.2em solid #ff3a20;
+  margin: 1em 0 1em 0;
+}
+.fondoGris p {
+  padding: 1em 1em 1.5em 1.2em;
+}
+
+/* Foto y su descripción */
+.votando {
+  margin-bottom: 2em;
+}
+.votando img {
+  width: 80%;
+  height: 47em;
+  margin: 2em auto 0 auto;
+  padding: auto;
+  display: block;
+}
+.votando p {
+  margin-bottom: 0.5em;
+  margin-left: 9.3em;
+  font-size: 0.8em;
+}
+
+/* Elaborado */
+.elaborado {
+  text-align: center;
+  font-size: 0.7em;
+}
+
+/*    FOOTER    */
+footer {
+  background-color: black;
+  color: white;
+  text-align: left;
+  padding: 1em 1em 5em 1em;
+}
+footer p {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.7em;
+  padding-left: 13em;
+}
+
+.logos {
+  padding-left: 9em;
+  padding-bottom: 0.6em;
+}
+
+.redes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+.redes li {
+  list-style: none;
+}
+.redes li a img {
+  margin: 0em 0.2em 0em;
+  background-color: white;
+  filter: invert(0);
+  border-radius: 50%;
+  transition: 0.5s background-color, 0.5s filter;
+  width: 2em;
+  height: 2em;
+}
+.redes li a img:hover {
+  filter: invert(1);
+}
+
+
+/*    RESPONSIVE    */
+@media screen and (max-width: 768px){
+  nav ul{
+    align-items: center;
+    flex-direction: column-reverse;
+    display: block !important;
+    margin: 1em auto 1em auto;
+  }
+
+}
+
+@media screen and (max-width: 600px){
+  nav ul{
+    display: block !important;
+    margin: 1em auto 1em auto;
+  }
+
+}
+
+@media screen and (max-width: 480px){
+  .video {
+    width: 80%;
+    height: 9em;
+  }
+  
+  .videoDesc {
+    font-size: 10px;
+    margin: 0.5em 0 2em 3em;
+  }
+  .votando {
+    margin-bottom: 2em;
+  }
+  .votando img {
+    width: 80%;
+    height: 10em;
+  }
+  .votando p {
+    margin-bottom: 0.5em;
+    margin-left: 3em;
+    font-size: 0.6em;
+  }
+  .logos {
+    padding-left: 2em;
+    padding-bottom: 0.6em;
+  }
+  footer p {
+    font-size: 0.7em;
+    padding-left: 3em;
+  }
+}
